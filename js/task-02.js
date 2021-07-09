@@ -10,24 +10,20 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector('#ingredients')
 
-const liOne = document.createElement('li');
-liOne.textContent = ingredients[0];
 
-const liTwo = document.createElement('li');
-liTwo.textContent = ingredients[1];
+function createElementLi(ingredient) {
+  const arrayElementsLi = [];
+  for (const el of ingredient) {
+    const li = document.createElement('li');
+    li.textContent = el;
 
-const liTree = document.createElement('li');
-liTree.textContent = ingredients[2];
+    arrayElementsLi.push(li);
+  }
 
-const liFour = document.createElement('li');
-liFour.textContent = ingredients[3];
-
-const liFife = document.createElement('li');
-liFife.textContent = ingredients[4];
-
-const liSix = document.createElement('li');
-liSix.textContent = ingredients[5];
+  return arrayElementsLi;
+}
 
 
+const LiEl = createElementLi(ingredients);
 
-ingredientsEl.append(liOne, liTwo, liTree, liFour, liFife, liSix)
+ingredientsEl.append(...LiEl)
