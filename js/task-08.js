@@ -6,7 +6,7 @@ destroy.addEventListener("click", destroyBoxes);
 
 function getAmount() {
   let amount = document.querySelector("#controls input").value;
-  createBoxes(amount);
+  createBoxes(amount)
 }
 
 function createBoxes(amount) {
@@ -23,6 +23,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   boxes.innerHTML = "";
+  document.querySelector("#controls input").value = '';
 }
 
 function random() {

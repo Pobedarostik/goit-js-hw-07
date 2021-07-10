@@ -23,7 +23,6 @@ function createElementLi(ingredient) {
   return arrayElementsLi;
 }
 
-
 const LiEl = createElementLi(ingredients);
 
 ingredientsEl.append(...LiEl)
